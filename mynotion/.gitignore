@@ -30,7 +30,7 @@ out/
 .vscode/
 
 # Spring Boot
-mynotion/src/main/resources/application.properties
+application.properties
 
 # Gradle
 .gradle/
