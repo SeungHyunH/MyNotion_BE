@@ -31,6 +31,7 @@ out/
 
 # Spring Boot
 application.properties
+application.log
 
 # Gradle
 .gradle/
