@@ -1,0 +1,41 @@
+frontend:
+  cors:
+    api.url: http://localhost:3000
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mynotion?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: vkflek1232
+    password: tmdgus8574!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    open-in-view: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        highlight_sql: true
+
+jwt:
+  secret: gwNzuI5oWPlG0C5hUBz55TmncN/6RgXCkE8yRg+5xjE=
+  expirationMs: 3600000
+  refreshTokenExpirationMs: 604800000
+
+logging:
+  level:
+    org.hibernate.orm.jdbc.bind: TRACE
+
+oauth:
+  kakao:
+    client_id: 7d52bcb7cec61147f86714ee13c9677e # REST API 키
+    redirect_uri: http://localhost:3000/oauth/kakao
+    client_secret: yHRBb8AcSBrV1qRnKXUjVVWemTwiIgYs # Client Secret 키
+    scope: profile_nickname, profile_image
+  naver:
+    client_id: pfGlsasg5RecoMOHxu2i
+    redirect_uri: http://localhost:3000/oauth/naver
+    client_secret: s89EMXjgXR
+    scope: client_id, secret, redirect_uri
